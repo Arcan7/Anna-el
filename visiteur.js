@@ -1,6 +1,6 @@
 var visits = localStorage.getItem('visits');
 
-if (visits){
+if (!visits){
     visits = 0;
 }
 
