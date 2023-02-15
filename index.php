@@ -331,7 +331,7 @@
                         </div>
                     </div>
                     <div class="col-lg-8 mt-5 mt-lg-0">
-                        <form action="" method="POST" id="emailForm" role="form" class="php-email-form">
+                        <form action="send-email.php" method="POST" id="emailForm" role="form" class="php-email-form">
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -346,7 +346,12 @@
                             <div class="form-group mt-3">
                                 <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message" required></textarea>
                             </div>
-                            <div class="text-center"><button type="submit" onclick="alert('Contact form en maintenance')" class="bg-success" disabled>Send Message</button>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"><?php echo $error_message?></div>
+                                <div class="sent-message"><?php echo $sent_message?></div>
+                            </div>
+                            <div class="text-center"><button type="submit" class="bg-success">Send Message</button>
                             </div>
                         </form>
                     </div>
